@@ -63,31 +63,12 @@ const PostPage = (props) => {
               </button>
             </div>
           </form>
-
-          {/* <div>{"Thread id =  " + props.postId}</div> */}
         </>
       ) : (
         <></>
       )}
     </>
   );
-
-  //
-  // return(
-  // <form className={styles.formControls} onSubmit={submitHandler}>
-  //   <div>
-  //     <label className={styles.formCommentLabel}>Comment:</label>
-  //     <input
-  //       className={styles.formCommentText}
-  //       type="text"
-  //       value={enteredText}
-  //       onChange={replyHandler}
-  //     />
-  //     <button className={styles.newThreadSubmit} type="submit">
-  //       Submit
-  //     </button>
-  //   </div>
-  // </form>);
 };
 
 export default PostPage;
