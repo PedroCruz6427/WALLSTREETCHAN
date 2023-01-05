@@ -7,8 +7,8 @@ function Posts({ id, title, text }) {
       <Link href={`/thread/` + id} key={id}>
         <a className="postPreview">
           <div className={styles.postBox}>
-            <div className="post-title">{title}</div>
-            <div className="post-text">{text}</div>
+            <div className={styles.postTitle}>{title}</div>
+            <div className={styles.postText}>{text}</div>
           </div>
         </a>
       </Link>

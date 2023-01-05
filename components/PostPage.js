@@ -52,7 +52,7 @@ const PostPage = (props) => {
           <form className={styles.formControls} onSubmit={submitHandler}>
             <div>
               <label className={styles.formCommentLabel}></label>
-              <input
+              <textarea
                 className={styles.formCommentText}
                 type="text"
                 value={enteredReply}

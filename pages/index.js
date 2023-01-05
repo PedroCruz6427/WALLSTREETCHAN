@@ -33,9 +33,8 @@ export default function Home(props) {
         ))}
       </section>
       <footer className={styles.footer}>
-        <h1>This is the Footer</h1>
+        <Link href="/about">About</Link>
       </footer>
-      <Link href="/thread">Threads Link</Link>
     </>
   );
 }

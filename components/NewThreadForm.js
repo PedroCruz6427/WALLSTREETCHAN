@@ -78,7 +78,7 @@ const NewThreadForm = (props) => {
                 onChange={nameHandler}
               />
               <label className={styles.formCommentLabel}>Comment:</label>
-              <input
+              <textarea
                 className={styles.formCommentText}
                 type="text"
                 value={enteredText}
