@@ -50,7 +50,7 @@ const NewThreadForm = (props) => {
     setEnteredName("");
     setEnteredText("");
     setToggle(!toggle);
-    refreshData();
+    setTimeout(refreshData(), 5000);
   };
 
   //      form toggle
