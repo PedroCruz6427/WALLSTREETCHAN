@@ -6,7 +6,8 @@ const NewThreadForm = (props) => {
   const [enteredText, setEnteredText] = useState("");
   const router = useRouter();
   const refreshData = () => {
-    router.replace(router.asPath);
+    // router.replace(router.asPath);
+    router.reload();
   };
   //event handlers
   const nameHandler = (event) => {
