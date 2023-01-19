@@ -6,6 +6,7 @@ import NewThreadForm from "../components/NewThreadForm";
 import Posts from "../components/Posts";
 import Link from "next/dist/client/link";
 import { MongoClient } from "mongodb";
+import { Router } from "next/router";
 
 export default function Home(props) {
   return (

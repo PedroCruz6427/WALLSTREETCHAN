@@ -57,7 +57,7 @@ export default Postspage;
 //send a request to the backend API
 // to fetch the news item with postspage
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch("https://wallstreetchan.vercel.app/api/home");
   const data = await res.json();
 

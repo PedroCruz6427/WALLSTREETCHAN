@@ -32,6 +32,7 @@ const PostPage = (props) => {
     setEnteredReply("");
     setToggle(!toggle);
     refreshData();
+    router.reload();
   };
 
   const [toggle, setToggle] = useState(false);
