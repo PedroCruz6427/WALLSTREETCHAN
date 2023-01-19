@@ -32,7 +32,7 @@ const PostPage = (props) => {
     setEnteredReply("");
     setToggle(!toggle);
     // refreshData();
-    setTimeout(refreshData(), 4000);
+    setTimeout(refreshData(), 5000);
   };
 
   const [toggle, setToggle] = useState(false);
