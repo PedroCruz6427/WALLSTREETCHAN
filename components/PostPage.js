@@ -11,7 +11,7 @@ const PostPage = (props) => {
   };
   setTimeout(() => {
     refreshData();
-  }, 3000);
+  }, 6000);
   //event handlers
   const replyHandler = (event) => {
     setEnteredReply(event.target.value);
