@@ -57,7 +57,7 @@ export default Postspage;
 //send a request to the backend API
 // to fetch the news item with postspage
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch("https://wallstreetchan.vercel.app/api/home");
   const data = await res.json();
 
@@ -66,29 +66,6 @@ export async function getStaticProps() {
     revalidate: 1,
   };
 }
-// export async function getStaticProps(context) {
-//   const client = await MongoClient.connect(
-//     "mongodb+srv://Khan1:6F7h8ppNrVj3vdlB@cluster0.ewzresa.mongodb.net/WSC?retryWrites=true&w=majority"
-//   );
-
-//   const db = client.db();
-
-//   const postsCollection = db.collection("posts");
-
-//   const posts = await postsCollection.find().toArray();
-//   client.close();
-
-//   return {
-//     props: {
-//       postList: posts.map((post) => ({
-//         title: post.title,
-//         text: post.text,
-//         id: post._id.toString(),
-//       })),
-//     },
-//     revalidate: 1,
-//   };
-// }
 
 export const getStaticPaths = async () => {
   return {
