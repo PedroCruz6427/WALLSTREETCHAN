@@ -5,8 +5,7 @@ const PostPage = (props) => {
   const postId = props.postId;
   const [enteredReply, setEnteredReply] = useState("");
   const router = useRouter();
-
-  refreshData = () => {
+  const refreshData = () => {
     router.replace(router.asPath);
   };
   //event handlers
