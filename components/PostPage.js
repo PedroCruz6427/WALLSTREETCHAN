@@ -5,9 +5,13 @@ const PostPage = (props) => {
   const postId = props.postId;
   const [enteredReply, setEnteredReply] = useState("");
   const router = useRouter();
-  const refreshData = () => {
+
+  refreshData = () => {
     router.replace(router.asPath);
   };
+  setTimeout(() => {
+    refreshData();
+  }, 3000);
   //event handlers
   const replyHandler = (event) => {
     setEnteredReply(event.target.value);
@@ -31,8 +35,7 @@ const PostPage = (props) => {
     //
     setEnteredReply("");
     setToggle(!toggle);
-    refreshData();
-    router.reload();
+    // refreshData();
   };
 
   const [toggle, setToggle] = useState(false);
