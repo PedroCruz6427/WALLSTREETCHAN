@@ -60,7 +60,7 @@ const PostPage = (props) => {
                 value={enteredReply}
                 onChange={replyHandler}
               />
-              <button className={styles.newThreadSubmit} type="submit">
+              <button className={styles.newThreadSubmit} type="button">
                 Submit
               </button>
             </div>

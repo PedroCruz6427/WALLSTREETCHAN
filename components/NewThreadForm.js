@@ -85,7 +85,7 @@ const NewThreadForm = (props) => {
                 value={enteredText}
                 onChange={textHandler}
               />
-              <button className={styles.newThreadSubmit} type="submit">
+              <button className={styles.newThreadSubmit} type="button">
                 Submit
               </button>
             </div>
