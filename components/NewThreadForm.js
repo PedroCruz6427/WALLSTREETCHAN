@@ -7,7 +7,7 @@ const NewThreadForm = (props) => {
   const router = useRouter();
   const refreshData = () => {
     // router.replace(router.asPath);
-    router.reload;
+    router.reload();
   };
   //event handlers
   const nameHandler = (event) => {
@@ -50,7 +50,7 @@ const NewThreadForm = (props) => {
     setEnteredName("");
     setEnteredText("");
     setToggle(!toggle);
-    setTimeout(refreshData(), 5000);
+    setTimeout(refreshData(), 8000);
   };
 
   //      form toggle
