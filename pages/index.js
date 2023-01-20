@@ -59,6 +59,6 @@ export async function getStaticProps() {
         id: post._id.toString(),
       })),
     },
-    revalidate: 1,
+    revalidate: 5,
   };
 }
