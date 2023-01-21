@@ -5,10 +5,10 @@ const PostPage = (props) => {
   const postId = props.postId;
   const [enteredReply, setEnteredReply] = useState("");
   const router = useRouter();
-  const refreshData = () => {
-    // router.replace(router.asPath);
-    router.reload();
-  };
+  // const refreshData = () => {
+  //   router.replace(router.asPath);
+  //   router.reload();
+  // };
   //event handlers
   const replyHandler = (event) => {
     setEnteredReply(event.target.value);
@@ -33,7 +33,17 @@ const PostPage = (props) => {
     setEnteredReply("");
     setToggle(!toggle);
     // refreshData();
-    setTimeout(refreshData(), 8000);
+    setTimeout(() => {
+      console.log("Delayed for 2 second.");
+    }, "2000");
+    setTimeout(() => {
+      console.log("Delayed for 1 second.");
+    }, "1000");
+    setTimeout(() => {
+      router.reload() + "testing";
+    }, "2000");
+
+    // console.log(router.query + "hello there");
   };
 
   const [toggle, setToggle] = useState(false);
