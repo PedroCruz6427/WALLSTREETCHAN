@@ -33,15 +33,13 @@ const PostPage = (props) => {
     setEnteredReply("");
     setToggle(!toggle);
     // refreshData();
+
     setTimeout(() => {
-      console.log("Delayed for 2 second.");
-    }, "2000");
+      router.reload();
+    }, "3000");
     setTimeout(() => {
-      console.log("Delayed for 1 second.");
-    }, "1000");
-    setTimeout(() => {
-      router.reload() + "testing";
-    }, "5000");
+      router.reload();
+    }, "4000");
 
     // console.log(router.query + "hello there");
   };

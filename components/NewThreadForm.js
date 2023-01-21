@@ -51,14 +51,11 @@ const NewThreadForm = (props) => {
     setEnteredText("");
     setToggle(!toggle);
     setTimeout(() => {
-      console.log("Delayed for 2 second.");
-    }, "2000");
+      router.reload();
+    }, "3000");
     setTimeout(() => {
-      console.log("Delayed for 1 second.");
-    }, "1000");
-    setTimeout(() => {
-      router.reload() + "testing";
-    }, "5000");
+      router.reload();
+    }, "4000");
   };
 
   //      form toggle
