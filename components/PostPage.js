@@ -41,7 +41,7 @@ const PostPage = (props) => {
     }, "1000");
     setTimeout(() => {
       router.reload() + "testing";
-    }, "2000");
+    }, "4000");
 
     // console.log(router.query + "hello there");
   };
