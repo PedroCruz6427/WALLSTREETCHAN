@@ -52,10 +52,7 @@ const NewThreadForm = (props) => {
     setToggle(!toggle);
     setTimeout(() => {
       router.reload();
-    }, "3000");
-    setTimeout(() => {
-      router.reload();
-    }, "4000");
+    }, "5000");
   };
 
   //      form toggle
