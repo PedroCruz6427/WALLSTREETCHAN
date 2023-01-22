@@ -4,11 +4,7 @@ import { useRouter } from "next/router";
 const NewThreadForm = (props) => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredText, setEnteredText] = useState("");
-  const router = useRouter();
-  const refreshData = () => {
-    // router.replace(router.asPath);
-    router.reload();
-  };
+
   //event handlers
   const nameHandler = (event) => {
     setEnteredName(event.target.value);
@@ -50,9 +46,6 @@ const NewThreadForm = (props) => {
     setEnteredName("");
     setEnteredText("");
     setToggle(!toggle);
-    setTimeout(() => {
-      refreshData();
-    }, "5000");
   };
 
   //      form toggle
