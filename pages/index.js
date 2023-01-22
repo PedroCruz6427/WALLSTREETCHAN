@@ -11,8 +11,8 @@ import { useRouter } from "next/router";
 export default function Home(props) {
   const router = useRouter();
   const refreshData = () => {
-    router.replace(router.asPath);
-    // router.reload();
+    // router.replace(router.asPath);
+    router.reload();
   };
   return (
     <>

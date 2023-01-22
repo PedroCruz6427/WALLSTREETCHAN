@@ -18,8 +18,8 @@ function Postspage(props) {
   // Finding  object with id
   const foundItem = opPostData.find((desired) => desired._id == postId);
   const { _id, title, text, replies } = foundItem;
-  console.log(_id, title, text, replies);
-  console.log(foundItem);
+  // console.log(_id, title, text, replies);
+  // console.log(foundItem);
   if (postId === _id) {
     console.log("success");
   } else {

@@ -7,7 +7,7 @@ const PostPage = (props) => {
   const router = useRouter();
   const refreshData = () => {
     router.replace(router.asPath);
-    // router.reload();
+    router.reload();
   };
   //event handlers
   const replyHandler = (event) => {
@@ -32,8 +32,6 @@ const PostPage = (props) => {
     //
     setEnteredReply("");
     setToggle(!toggle);
-    // refreshData();
-
     setTimeout(() => {
       refreshData();
     }, "5000");
