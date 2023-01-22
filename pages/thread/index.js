@@ -26,7 +26,7 @@ export default function threads({ posts }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const data = await res.json();
 
