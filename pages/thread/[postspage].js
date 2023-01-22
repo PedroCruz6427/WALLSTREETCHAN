@@ -48,6 +48,7 @@ function Postspage(props) {
           );
         })}
       </section>
+
       <PostPage postId={postId} />
     </>
   );

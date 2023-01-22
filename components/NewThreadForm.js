@@ -5,10 +5,10 @@ const NewThreadForm = (props) => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredText, setEnteredText] = useState("");
   const router = useRouter();
-  // const refreshData = () => {
-  //   router.replace(router.asPath);
-  //   router.reload();
-  // };
+  const refreshData = () => {
+    router.replace(router.asPath);
+    // router.reload();
+  };
   //event handlers
   const nameHandler = (event) => {
     setEnteredName(event.target.value);
@@ -51,7 +51,7 @@ const NewThreadForm = (props) => {
     setEnteredText("");
     setToggle(!toggle);
     setTimeout(() => {
-      router.reload();
+      refreshData();
     }, "5000");
   };
 

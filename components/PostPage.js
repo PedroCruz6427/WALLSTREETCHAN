@@ -5,10 +5,10 @@ const PostPage = (props) => {
   const postId = props.postId;
   const [enteredReply, setEnteredReply] = useState("");
   const router = useRouter();
-  // const refreshData = () => {
-  //   router.replace(router.asPath);
-  //   router.reload();
-  // };
+  const refreshData = () => {
+    router.replace(router.asPath);
+    // router.reload();
+  };
   //event handlers
   const replyHandler = (event) => {
     setEnteredReply(event.target.value);
@@ -35,7 +35,7 @@ const PostPage = (props) => {
     // refreshData();
 
     setTimeout(() => {
-      router.reload();
+      refreshData();
     }, "5000");
 
     // console.log(router.query + "hello there");
@@ -50,9 +50,15 @@ const PostPage = (props) => {
   return (
     <>
       {/* threadbutton */}
-      <button onClick={handClick} className={styles.newThreadButton}>
-        Reply
-      </button>
+      <section className={styles.buttons}>
+        <button onClick={handClick} className={styles.newThreadButton}>
+          Reply
+        </button>
+        <button className={styles.refreshButton} onClick={refreshData}>
+          Refresh
+        </button>
+      </section>
+
       {/* form */}
       {toggle ? (
         <>

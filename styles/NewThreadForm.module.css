@@ -47,3 +47,19 @@
 .newThreadSubmit:hover {
   box-shadow: inset 300px 0 0 0 gold;
 }
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.refreshButton {
+  background-color: blueviolet;
+  border-radius: 8px;
+  transition: ease-out 1.1s;
+  margin-top: 5px;
+}
+
+.refreshButton:hover {
+  box-shadow: inset 300px 0 0 0 gold;
+}

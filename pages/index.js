@@ -6,9 +6,14 @@ import NewThreadForm from "../components/NewThreadForm";
 import Posts from "../components/Posts";
 import Link from "next/dist/client/link";
 import { MongoClient } from "mongodb";
-import { Router } from "next/router";
+import { useRouter } from "next/router";
 
 export default function Home(props) {
+  const router = useRouter();
+  const refreshData = () => {
+    router.replace(router.asPath);
+    // router.reload();
+  };
   return (
     <>
       <Head>
@@ -34,6 +39,9 @@ export default function Home(props) {
         ))}
       </section>
       <footer className={styles.footer}>
+        <button className={styles.refreshButton} onClick={refreshData}>
+          Refresh
+        </button>
         <Link href="/about">About</Link>
       </footer>
     </>
